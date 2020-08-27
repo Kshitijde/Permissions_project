@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Permissions Site</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script src="bower_components/aos/dist/aos.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#Locations">About Us</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#booking">Feedback</a>
+			</li>
+        </ul>
+        <ul class="navbar-nav ml-auto" style="color:#fff"> 
+			<li id="drop">
+				<div class="dropdown" id="drop3">
+					<button type="button" class="btn btn-primary dropdown-toggle"  id="btn" data-toggle="dropdown">
+						Profile
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Info</a>
+						<a class="dropdown-item" href="#">Recents</a>
+						<a class="dropdown-item" href="#">Security</a>
+					</div>
+				</div> 
+			</li>
+		</ul>
+	</nav>
+    <div class="jumbotron jumbotron-fluid"  id="gradient"style="background-color: lightgreen;">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <div class="flip-card btn-no-waves border border-dark" style="height: 15rem;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                                <p class="card-text text-center"><a href="#" target="_blank" class="stretched-link btn btn-success">New Request</a></p>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-body">
+                                <h2>Create New Request</h2>
+                                <p style="text-align: justify;">Add a brand new permissions request.Streamline your permission procedure with just one click!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip-card btn-no-waves border border-dark" style="height: 15rem;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                                <p class="card-text text-center"><a href="#" target="_blank" class="stretched-link btn btn-info">Track</a></p>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-body">
+                                <h2>Track Your Request</h2>
+                                <p> <div class="progress">
+                                    <div class="progress-bar bg-success" style="width:70%">70%</div>
+                                  </div>
+                                </p>
+                                <p>
+                                    You have completed 70%.Almost there!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        
+        <div class="row" style="margin-top: 2% ;">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <div class="flip-card btn-no-waves border border-dark" style="height: 15rem;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                                <p class="card-text text-center"><a href="#" target="_blank" class="stretched-link btn btn-danger">Link three</a></p>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-body">
+                                <h2>Some good Interesting Title</h2>
+                                <p style="text-align: justify;">Enter the contents on line one. Follow it by the contents on line two too</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="flip-card btn-no-waves border border-dark" style="height: 15rem;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                                <p class="card-text text-center"><a href="#" target="_blank" class="stretched-link btn btn-primary">History</a></p>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-body">
+                                <h2>History of permissions</h2>
+                                <p style="text-align: justify;">View a collection of your past permission requests at a glance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    
+    </div>
+   </body>
+</html>
