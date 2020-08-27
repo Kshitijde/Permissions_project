@@ -1,0 +1,12 @@
+function check() {
+  var mobilenumber = document.getElementById("mobilenumber").value;
+  var mobsp = document.getElementById("mobsp");
+
+  if (mobilenumber.length > 10 || mobilenumber.length < 10) {
+    mobsp.innerHTML = "Mobile number must be 10 digits";
+    return false;
+  } else {
+    mobsp.innerHTML = "";
+    return true;
+  }
+}
