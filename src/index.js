@@ -19,17 +19,16 @@ app.set('view engine','hbs')
 app.set('views' ,viewspath)
 hbs.registerPartials(partialspath)
 
-const teacherRouter = require('../src/routers/teacher')
+const approvalRouter = require('../src/routers/approval')
 const requestRouter = require('../src/routers/request')
-app.use(teacherRouter)
+
+app.use(approvalRouter)
 app.use(requestRouter)
 
 app.get('/',(req,res)=>{
 
     res.render('index')
 })
-
-
 
 app.listen(port ,()=>{
 

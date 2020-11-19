@@ -13,6 +13,9 @@ const requestSchema = mongoose.Schema({
         trim :true ,
         required :true 
        
+    },status:{
+        type :Number,
+        default : 0 
     }
 })
 

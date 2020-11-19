@@ -6,11 +6,24 @@
     <title>Approval</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  
-    <link rel="stylesheet" href="teacher.styles.css">
-</head>
-<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" >
 
+<script>
+$(document).ready(function(){
+    console.log("Loaded!!")
+    
+    if({{status}} != 0){
+        console.log({{status}})
+        $("#approve_btn").prop("disabled" ,true)
+        $("#reject_btn").prop("disabled" ,true)
+
+    }
+});
+</script>
+</head>
+
+<body>
     
     <div class="container">
 
@@ -19,15 +32,43 @@
             <div class="card-body">
             <h1 class="card-title">{{groupname}}</h1>
             <h2 class="card-text">{{eventname}}</h2>
+            <h2 class="card-text">{{message}}</h2>
             <p class="card-text">All the details are here.</p>
-            <button type="button" class="btn btn-success">Approve</button>
-            <button type="button" class="btn btn-danger">Reject</button>
+            <button type="button" id="approve_btn"class="btn btn-success"
+            onclick=onapprove() >Approve</button>
+
+            <button type="button" id="reject_btn"class="btn btn-danger"
+            onclick=onreject()>Reject</button>
             </div>
+
+            <a class="button" onclick="window.location.href = '/requests'" >Return Home</a>
         </div>
         
     </div>
 
+<script>
+    function onapprove(){
+        
+        if(confirm("Do you surely wish to approve the request ?")){
+            window.location.href='/approval/{{id}}/app_status/1'
+        }else{
+            window.location.href='/requests'
+        }
 
+    }
+
+    function onreject(){
+        if(confirm("Do you surely wish to reject the request ?")){
+            window.location.href='/approval/{{id}}/app_status/-1'
+        }
+        else{
+            window.location.href='/requests'
+        }
+
+    }
+
+</script>
+<script src="/js/app.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
