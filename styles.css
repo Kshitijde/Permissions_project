@@ -1,6 +1,3 @@
-
-
-
 h1{
     text-align: center;
     color: white;
@@ -10,17 +7,10 @@ h1{
     font-family: Cairo;
 }
 
-h3{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;    
-}
-
-
 nav{
-    font-size: 25px;
+    font-size: 20px;
     background-color: white;
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     color: black;
     font-weight: bold;
 }
@@ -48,3 +38,18 @@ nav{
     font-weight: bold;
 }
 
+#navbar-logo{
+    height: 100px;
+}
+
+@media(max-width: 450px){
+    .navbar-text{
+        margin: auto;
+    }
+}
+
+@media(max-width: 325px){
+    .navbar-text{
+        display: none;
+    }
+}
